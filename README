@@ -1,0 +1,48 @@
+# Lottery Smart Contract
+
+This project contains a basic lottery smart contract written in Solidity. The contract allows people to join a lottery by sending exactly 1 Ether. Once at least 3 participants have joined, the manager (the person who deployed the contract) can pick a random winner. The entire balance of the contract is then sent to the winner, and the participant list is cleared for the next round.
+
+---
+
+## Features
+
+- Only the manager can view the balance and choose the winner.
+- Participants can join by sending exactly 1 ETH.
+- A random function is used to select the winner.
+- After selecting a winner, the participant list is reset.
+
+---
+
+## How It Works
+
+1. The manager deploys the contract.
+2. Participants send exactly 1 ETH to the contract to enter the lottery.
+3. When there are at least 3 participants, the manager can call the `selectWinner()` function.
+4. The contract chooses one participant at random.
+5. The winner receives all the ETH in the contract.
+6. The participants list is reset and a new round can begin.
+
+---
+
+## How to Use (in Remix)
+
+1. Open [Remix IDE](https://remix.ethereum.org).
+2. Create a new file named `Lottery.sol`.
+3. Paste the smart contract code into it.
+4. Compile the contract using a Solidity version between 0.5.0 and 0.9.0.
+5. Deploy the contract using **Injected Web3** if you're using MetaMask.
+6. To join the lottery, send exactly 1 ETH to the contract.
+7. Once at least 3 people have joined, the manager can call `selectWinner()` to pick a winner.
+
+---
+
+## License
+
+This project is licensed under the GNU General Public License v3.0 (GPL-3.0).
+
+---
+
+## Author
+
+Inderjot Singh  
+Email: singhinderjot816@gmail.com
